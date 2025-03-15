@@ -27,11 +27,6 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Git config
-        shell: bash
-        run: |
-          git config --system core.longpaths true
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -57,4 +52,4 @@ jobs:
 
       - name: Unit Test
         if: ${{steps.skip-ci.outputs.RESULT != 'true'}}
-        run: npx playwright install && npm run test:run-browser -- --browser.api.port 63316
+        run: npx playwright install && npm run test:run-browser
