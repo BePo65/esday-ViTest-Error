@@ -37,7 +37,7 @@
     "test": "vitest",
     "test:ui": "vitest --ui --api 9527",
     "test:run": "vitest --run",
-    "test:run-browser": "vitest --run --browser.enabled --testTimeout=20000 --reporter=verbose",
+    "test:run-browser": "vitest --run --browser.enabled --testTimeout=20000",
     "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {

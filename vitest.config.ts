@@ -20,12 +20,5 @@ export default defineConfig({
         { browser: 'firefox' },
       ],
     },
-    onConsoleLog(log) {
-      // HACK suppress moment.js deprecation warning from test file
-      // 'test/plugins/toArray.test.ts > toArray plugin > should handle invalid dates gracefully'
-      if (log.includes('Non RFC2822/ISO date formats are discouraged'))
-        return false
-      return true
-    },
   },
 })
