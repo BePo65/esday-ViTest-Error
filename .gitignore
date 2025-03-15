@@ -1,0 +1,8 @@
+node_modules
+dist
+bun.lockb
+coverage
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
