@@ -22,14 +22,4 @@ const esday: EsDayFactory = (d?: DateType, ...others: (SimpleType | { [key: stri
   }
 }
 
-esday.extend = (plugin, option) => {
-  // @ts-expect-error plugin
-  if (!plugin.$i) { // install plugin only once
-    plugin(option as any, EsDay, esday)
-    // @ts-expect-error plugin
-    plugin.$i = true
-  }
-  return esday
-}
-
 export { esday }
